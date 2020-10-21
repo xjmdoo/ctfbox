@@ -5,7 +5,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Budapest
 
 RUN apt update
-RUN apt install -y vim git build-essential gdb ltrace strace curl wget python3 python3-pip python3-dev libssl-dev libffi-dev
+RUN apt install -y vim git build-essential gdb \
+    ltrace strace curl wget python3 python3-pip \
+    python3-dev libssl-dev libffi-dev netcat
 
 # Install pwntools
 RUN python3 -m pip install --upgrade pip
